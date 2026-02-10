@@ -1,0 +1,125 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background: #f5f7f9;
+}
+
+/* BACKGROUND */
+.page-bg{
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+    url("asu_charter.jpeg") center / cover no-repeat;
+  z-index: -1;
+}
+
+/* CENTER CONTENT */
+.page-center{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* CARD */
+.bio-card{
+  max-width: 900px;
+  background: rgba(255,255,255,0.45);
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.15);
+}
+
+.bio-card h1{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* LAYOUT */
+.bio-layout{
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.bio-text p{
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+/* IMAGE */
+.bio-photo{
+  width: 240px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* BACK LINK */
+.back-link{
+  display: block;
+  margin-top: 25px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: #006d77;
+}
+
+.back-link:hover{
+  text-decoration: underline;
+}
+
+/* FLOATING BUTTON GROUP */
+.bio-fab-group{
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  gap: 14px;
+}
+
+/* FLOATING BUTTON */
+.bio-fab{
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.bio-fab img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.bio-fab:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.35);
+}
+
+/* MOBILE */
+@media (max-width: 700px){
+  .bio-layout{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bio-photo{
+    width: 200px;
+  }
+}

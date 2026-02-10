@@ -1,0 +1,151 @@
+.page-wrap{
+  padding: 30px 15px;
+}
+
+.page-card{
+  max-width: 1050px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.62);
+  border-radius: 14px;
+  padding: 26px;
+}
+
+.page-card h1{
+  text-align: center;
+  margin-top: 0;
+}
+
+.lead{
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.55;
+}
+
+.divider{
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 22px 0;
+}
+
+.section{
+  margin: 22px 0;
+}
+
+/* Card grid */
+.dining-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 18px;
+}
+
+/* Card link wrapper */
+.card-link{
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card-link:hover .dining-card{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+  transition: 0.2s ease;
+}
+
+/* Dining card */
+.dining-card{
+  background: rgba(255,255,255,0.95);
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 18px;
+}
+
+/* Text */
+.meta{
+  margin: 0 0 10px;
+  font-size: 0.95em;
+  color: #444;
+}
+
+.desc{
+  margin: 0;
+  line-height: 1.55;
+}
+
+/* Pills */
+.pill{
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.75em;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.pill.casual{
+  background: rgba(255,111,97,0.45);
+  color: #8b2f28;
+}
+
+.pill.sitdown{
+  background: #e8f1ec;
+  color: #2f5d46;
+}
+
+.pill.upscale{
+  background: #e8f1ec;
+  color: #7a2f2f;
+}
+
+.pill.dessert{
+  background: #f3edf8;
+  color: #4f357a;
+}
+
+.pill.foodtruck{
+  background: rgba(255, 111, 97, 0.15);
+  color: #2f5d46;
+  
+}
+
+/* FLOATING BIO BUTTON */
+.bio-fab{
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.bio-fab img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.bio-fab:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.35);
+}
+
+.bio-fab{
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  z-index: 999;
+}

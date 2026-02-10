@@ -1,0 +1,225 @@
+/*   GENERAL  */
+
+body{
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background:
+    linear-gradient(rgba(255,255,255,0.78), rgba(255,255,255,0.78)),
+    url("kalalau_valley.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+/* HEADER & NAV */
+
+.header-image{
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.nav-bar{
+  background: #009DC4;
+}
+
+.nav-list{
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.nav-list a{
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-list li:not(:last-child)::after{
+  content: " | ";
+  color: #ffffff;
+  margin-left: 6px;
+}
+
+/*  INTRO  */
+
+.intro{
+  padding: 30px 15px;
+}
+
+.intro-box{
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.9);
+  padding: 24px;
+  border-radius: 14px;
+  opacity: 0.9;
+}
+
+/*  FLOWER GRID  */
+
+.flower-grid{
+  display: grid;
+  grid-template-columns: repeat(5, 240px);
+  gap: 30px;
+  justify-content: center;   
+  margin: 0 auto;
+}
+
+.flower-logo{
+  position: relative;
+  line-height: 0;
+  display: inline-block;
+}
+
+/* New wrapper that moves as ONE unit */
+.flower-hit{
+  position: relative;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+/* Only move the wrapper (image + text together) */
+.flower-hit:hover{
+  transform: translateY(-3px);
+}
+
+/* Column placement */
+.pos-1{ grid-column: 1; }
+.pos-2{ grid-column: 2; }
+.pos-3{ grid-column: 3; }
+.pos-4{ grid-column: 4; }
+.pos-5{ grid-column: 5; }
+
+.row-2{ grid-row: 2; }
+
+/*  FLOWER BUTTON  */
+
+.flower-img{
+  width: 240px;
+  display: block;
+  opacity: 0.85;
+}
+
+.flower-label{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 900;
+  font-size: 1.4em;
+  color: #000;
+  text-transform: uppercase;
+  pointer-events: none;
+  line-height: 1.1;
+
+  /* the shadow on the text */
+  text-shadow:
+    -1px -1px 0 #fff,
+     1px -1px 0 #fff,
+    -1px  1px 0 #fff,
+     1px  1px 0 #fff;
+}
+
+.site-footer{
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("footer_pic.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 40px 15px;
+  margin-top: 20px;
+}
+
+/* FLOATING BIO BUTTON */
+.bio-fab{
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.bio-fab img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.bio-fab:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.35);
+}
+
+.bio-fab{
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  z-index: 999;
+}
+
+
+
+/*  COLORS  */
+
+.orange .flower-img{
+  filter: brightness(0) saturate(100%) invert(55%) sepia(88%) saturate(800%) hue-rotate(350deg);
+}
+
+.blue .flower-img{
+  filter: brightness(0) saturate(100%) invert(43%) sepia(92%) saturate(600%) hue-rotate(165deg);
+}
+
+.green .flower-img{
+  filter: brightness(0) saturate(100%) invert(32%) sepia(65%) saturate(600%) hue-rotate(95deg);
+}
+
+.coral .flower-img{
+  filter: brightness(0) saturate(100%) invert(60%) sepia(40%) saturate(400%) hue-rotate(330deg);
+}
+
+.red .flower-img{
+  filter: brightness(0) saturate(100%) invert(14%) sepia(88%) saturate(5200%) hue-rotate(350deg);
+}
+
+/*   MOBILE  */
+
+@media (max-width: 700px){
+  .flower-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .flower-logo{
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .flower-img{
+    margin: 0 auto;
+  }
+}
+
+.clickable-flower{
+  cursor: pointer;
+}
