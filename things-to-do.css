@@ -61,9 +61,9 @@
   background-image: var(--card-bg);
   background-size: cover;
   background-position: center;
-  opacity: 0.0;
+  opacity: 0.1;
   transition: opacity 0.25s ease;
-  z-index: 3;   /* image sits above text on hover */
+  z-index: 3;  
 }
 
 
@@ -72,7 +72,7 @@
   opacity: 1;
 }
 
-/* ensure text stays readable and layered */
+/* text readable and layered */
 .todo-card > *{
   position: relative;
   z-index: 2;
@@ -127,7 +127,7 @@
   }
 }
 
-/* clickable card overlay link */
+/* clickable card */
 .todo-card a.card-link{
   position: absolute;
   inset: 0;
