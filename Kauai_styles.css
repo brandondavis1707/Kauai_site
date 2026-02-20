@@ -16,8 +16,8 @@ body{
 
 .header-image{
   width: 100%;
-  height: 240px;
-  object-fit: cover;
+  margin-left: 0;
+  height: auto;
 }
 
 .nav-bar{
@@ -124,6 +124,16 @@ body{
      1px -1px 0 #fff,
     -1px  1px 0 #fff,
      1px  1px 0 #fff;
+}
+
+.site-header{
+  background: linear-gradient(
+    to right,
+    #009DC4 0%,
+    transparent 12%,
+    transparent 88%,
+    #009DC4 100%
+  );
 }
 
 .site-footer{
