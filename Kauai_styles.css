@@ -137,9 +137,7 @@ body{
 }
 
 .site-footer{
-  background:
-    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-    url("footer_pic.jpg");
+
   background-size: cover;
   background-position: center;
   color: #fff;
